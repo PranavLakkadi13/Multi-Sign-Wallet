@@ -86,7 +86,7 @@ contract Multi_Signature_wallet {
     }
  
     // specifying returns type with var name will help save gas as it initiated outside a function 
-    // and also we need to explicitely type return at the end of the function to return the var 
+    // and also we dont need to explicitely type return at the end of the function to return the var 
     function _getApprovalcount(uint _txID) private view returns(uint count) { 
         for(uint i; i< owners.length ; i++){
             if (approved[_txID][owners[i]]) {
